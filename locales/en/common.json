@@ -196,5 +196,52 @@
     "jpy": "JPY",
     "cad": "CAD",
     "aud": "AUD"
+  },
+  "web3": {
+    "title": "Web3 Integration",
+    "sectionTitle": "Web3 Integration in Tradoxus",
+    "sectionSubtitle": "Tradoxus leverages Web3 technologies to provide a cutting-edge learning experience that goes beyond traditional educational platforms. Our Web3 integration offers unique advantages that prepare you for the real world of crypto trading.",
+    "whyWeb3Title": "Why Web3 Matters in Crypto Education",
+    "whyWeb3Subtitle": "Integrating Web3 technologies into our educational platform provides several key benefits.",
+    "features": {
+      "feature-1": {
+        "title": "Transparent Progress Tracking",
+        "description": "Your learning progress and achievements are recorded on the blockchain, ensuring transparency and immutability."
+      },
+      "feature-2": {
+        "title": "Token and NFT Rewards",
+        "description": "Earn real crypto tokens and educational NFTs as you complete courses and achieve milestones."
+      },
+      "feature-3": {
+        "title": "On-Chain Data Access",
+        "description": "Gain insights from real blockchain data for advanced analysis and decision-making in your trading strategies."
+      },
+      "feature-4": {
+        "title": "DeFi Protocol Integration",
+        "description": "Practice with simulated integrations of real DeFi protocols to understand complex trading scenarios."
+      }
+    },
+    "benefits": {
+      "benefit-1": {
+        "title": "Authenticity",
+        "description": "Learn with real-world data and scenarios."
+      },
+      "benefit-2": {
+        "title": "Interoperability",
+        "description": "Skills and credentials that can be recognized across the crypto ecosystem."
+      },
+      "benefit-3": {
+        "title": "Community",
+        "description": "Participate in a decentralized learning community governed by its members."
+      },
+      "benefit-4": {
+        "title": "Ownership",
+        "description": "True ownership of your educational achievements and rewards."
+      },
+      "benefit-5": {
+        "title": "Innovation",
+        "description": "Stay at the forefront of blockchain technology and its applications in finance."
+      }
+    }
   }
 } 
