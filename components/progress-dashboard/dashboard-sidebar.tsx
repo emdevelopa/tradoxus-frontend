@@ -105,34 +105,6 @@ export function Sidebar({ className }: SidebarProps) {
           })}
         </div>
 
-        {/* Secondary Navigation */}
-        <div className="border-t border-slate-200 pt-4 mt-4">
-          <div className="space-y-1">
-            {secondaryNavigation.map((item) => {
-              const isActive = pathname === item.href
-              return (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className={cn(
-                    "group flex items-center rounded-lg px-3 py-2.5 text-sm font-medium transition-all duration-200",
-                    isActive
-                      ? "bg-gradient-to-r from-cyan-50 to-teal-50 text-cyan-700 border border-cyan-200/50 shadow-sm"
-                      : "text-slate-600 hover:bg-slate-100 hover:text-slate-900",
-                  )}
-                >
-                  <item.icon
-                    className={cn(
-                      "mr-3 h-4 w-4 flex-shrink-0 transition-colors",
-                      isActive ? "text-cyan-600" : "text-slate-400 group-hover:text-slate-600",
-                    )}
-                  />
-                  {item.name}
-                </Link>
-              )
-            })}
-          </div>
-        </div>
       </nav>
     </div>
   )
