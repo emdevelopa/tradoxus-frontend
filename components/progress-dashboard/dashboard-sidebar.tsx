@@ -45,18 +45,6 @@ const navigation = [
   },
 ]
 
-const secondaryNavigation = [
-  {
-    name: "Profile",
-    href: "/profile",
-    icon: User,
-  },
-  {
-    name: "Settings",
-    href: "/settings",
-    icon: Settings,
-  },
-]
 
 interface SidebarProps {
   className?: string
