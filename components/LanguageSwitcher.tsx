@@ -68,7 +68,7 @@ export function LanguageSwitcher() {
         <Button
           variant="ghost"
           size="sm"
-          className="flex items-center gap-2 px-2 py-1 bg-background hover:bg-accent transition-all duration-300"
+          className="flex items-center gap-2 px-2 py-1 transition-all duration-300 bg-background hover:bg-accent"
         >
           <span className="text-lg">{currentLanguageObj.flag}</span>
           <span className="text-sm font-medium">
@@ -78,7 +78,7 @@ export function LanguageSwitcher() {
       </DropdownMenuTrigger>
       <DropdownMenuContent
         align="end"
-        className="w-48 bg-background border border-border"
+        className="w-48 border bg-background border-border"
       >
         {languages.map((language) => (
           <DropdownMenuItem
