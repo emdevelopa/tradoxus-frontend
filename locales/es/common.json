@@ -196,5 +196,52 @@
     "jpy": "JPY",
     "cad": "CAD",
     "aud": "AUD"
+  },
+  "web3": {
+    "title": "Integración Web3",
+    "sectionTitle": "Integración Web3 en Tradoxus",
+    "sectionSubtitle": "Tradoxus aprovecha las tecnologías Web3 para proporcionar una experiencia de aprendizaje de vanguardia que va más allá de las plataformas educativas tradicionales. Nuestra integración Web3 ofrece ventajas únicas que te preparan para el mundo real del trading de criptomonedas.",
+    "whyWeb3Title": "Por qué Web3 es importante en la educación sobre criptomonedas",
+    "whyWeb3Subtitle": "La integración de las tecnologías Web3 en nuestra plataforma educativa proporciona varias ventajas clave.",
+    "features": {
+      "feature-1": {
+        "title": "Seguimiento transparente del progreso",
+        "description": "Tu progreso de aprendizaje y tus logros se registran en la blockchain, lo que garantiza la transparencia e inmutabilidad."
+      },
+      "feature-2": {
+        "title": "Recompensas en tokens y NFT",
+        "description": "Gana tokens de criptomonedas reales y NFT educativos a medida que completas cursos y alcanzas hitos."
+      },
+      "feature-3": {
+        "title": "Acceso a datos en la cadena",
+        "description": "Obtén información de datos reales de la blockchain para un análisis avanzado y la toma de decisiones en tus estrategias de trading."
+      },
+      "feature-4": {
+        "title": "Integración de protocolos DeFi",
+        "description": "Practica con integraciones simuladas de protocolos DeFi reales para comprender escenarios de trading complejos."
+      }
+    },
+    "benefits": {
+      "benefit-1": {
+        "title": "Autenticidad",
+        "description": "Aprende con datos y escenarios del mundo real."
+      },
+      "benefit-2": {
+        "title": "Interoperabilidad",
+        "description": "Habilidades y credenciales que pueden ser reconocidas en todo el ecosistema de criptomonedas."
+      },
+      "benefit-3": {
+        "title": "Comunidad",
+        "description": "Participa en una comunidad de aprendizaje descentralizada gobernada por sus miembros."
+      },
+      "benefit-4": {
+        "title": "Propiedad",
+        "description": "Verdadera propiedad de tus logros y recompensas educativas."
+      },
+      "benefit-5": {
+        "title": "Innovación",
+        "description": "Mantente a la vanguardia de la tecnología blockchain y sus aplicaciones en las finanzas."
+      }
+    }
   }
 } 
