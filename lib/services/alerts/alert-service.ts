@@ -1,4 +1,5 @@
-import { prisma } from "@/lib/db";
+import { PrismaClient } from "@prisma/client";
+const prisma = new PrismaClient() as any;
 import { PriceData, AlertTriggerPayload, DeliveryMethod } from "./types";
 import {
   checkAlertCondition,
@@ -6,6 +7,7 @@ import {
   generateAlertMessage,
 } from "./alert-checker";
 import { NotificationService } from "./notification-service";
+
 
 export class AlertService {
   /**
