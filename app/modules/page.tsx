@@ -11,6 +11,8 @@ import {
 import { LearningPathCard } from "@/components/education/LearningPathCard";
 import { FeaturedModuleCard } from "@/components/education/FeaturedModuleCard";
 import { GetStartedAction } from "@/components/education/GetStartedAction";
+import { ModuleGrid } from "@/components/education/ModuleGrid";
+import { mockModulePreviewData } from "@/lib/mockdata/module-preview-mock-data";
 export const metadata: Metadata = {
   title: "Education - Tradoxus",
   description: "Master trading with our structured educational modules and learning paths",
@@ -127,22 +129,12 @@ export default function EducationPage() {
           </div>
 
           <div className="pt-8">
-            <div className="flex items-center justify-between mb-6">
-              <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Featured Modules</h2>
-              <a
-                href="/education/modules"
-                className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 text-sm font-medium"
-              >
-                View all modules
-                <ChevronRight className="h-4 w-4" />
-              </a>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {featuredModules.map((module, index) => (
-                <FeaturedModuleCard key={index} {...module} />
-              ))}
-            </div>
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Explore All Modules</h2>
+            <ModuleGrid 
+              modules={mockModulePreviewData} 
+              loading={false}
+              error={null}
+            />
 
             <GetStartedAction />
           </div>
