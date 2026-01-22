@@ -95,6 +95,8 @@ model PriceAlert {
   @@unique([userId, symbol, alertType, targetPrice])
 }
 
+
+
 model AlertDeliveryMethod {
   id      String  @id @default(cuid())
   alertId String
@@ -119,6 +121,8 @@ model Notification {
   
   createdAt     DateTime    @default(now())
 }
+
+
 
 enum AlertType {
   PRICE_ABOVE
