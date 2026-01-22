@@ -15,6 +15,8 @@ model User {
   portfolios    Portfolio[]  // Relation to Portfolio
   createdAt     DateTime    @default(now())
   updatedAt     DateTime    @updatedAt
+  alerts        PriceAlert[]
+  notifications Notification[]
 }
 
 model Portfolio {
@@ -63,4 +65,70 @@ model PortfolioValue {
   portfolio   Portfolio @relation(fields: [portfolioId], references: [id])
   value       Float
   date        DateTime @default(now())
+}
+
+// Add to prisma/schema.prisma
+
+model PriceAlert {
+  id            String              @id @default(cuid())
+  userId        String
+  user          User                @relation(fields: [userId], references: [id], onDelete: Cascade)
+  symbol        String              // e.g., "BTCUSDT"
+  assetName     String              // e.g., "Bitcoin"
+  
+  // Alert conditions
+  alertType     AlertType           // PRICE_ABOVE, PRICE_BELOW, PERCENT_CHANGE, VOLUME_SPIKE
+  targetPrice   Float?              // For price-based alerts
+  percentChange Float?              // For % change alerts
+  
+  // Notification preferences
+  notifications      Notification[]
+  deliveryMethods    AlertDeliveryMethod[]
+  
+  // Status
+  isActive      Boolean     @default(true)
+  lastTriggered DateTime?   
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime    @updatedAt
+  
+  // Unique constraint per user per symbol per alert type
+  @@unique([userId, symbol, alertType, targetPrice])
+}
+
+model AlertDeliveryMethod {
+  id      String  @id @default(cuid())
+  alertId String
+  alert   PriceAlert @relation(fields: [alertId], references: [id], onDelete: Cascade)
+  method  DeliveryMethod
+  enabled Boolean @default(true)
+  
+  @@unique([alertId, method])
+}
+
+model Notification {
+  id            String      @id @default(cuid())
+  userId        String
+  user          User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  alertId       String
+  alert         PriceAlert  @relation(fields: [alertId], references: [id], onDelete: Cascade)
+  
+  message       String
+  read          Boolean     @default(false)
+  deliveryMethod DeliveryMethod
+  deliveredAt   DateTime?
+  
+  createdAt     DateTime    @default(now())
+}
+
+enum AlertType {
+  PRICE_ABOVE
+  PRICE_BELOW
+  PERCENT_CHANGE
+  VOLUME_SPIKE
+}
+
+enum DeliveryMethod {
+  IN_APP
+  EMAIL
+  PUSH
 }
